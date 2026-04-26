@@ -1,40 +1,29 @@
 # Andre Souza Blog
 
-Source repository for Hashnode posts.
+This repository is the public source for my technical blog.
 
-## Publishing Flow
+I write from the perspective of an entrepreneur building and operating real business software with Oracle APEX, PL/SQL, Oracle Cloud Infrastructure, Codex, AI agents, GitHub, automation, and the practical engineering habits that keep production systems understandable and maintainable.
 
-1. Draft or update Markdown posts in this repository.
-2. Keep publishable Hashnode posts as `.md` files in the repository root.
-3. Commit and push to GitHub.
-4. Hashnode's GitHub integration imports the changed Markdown files.
-5. Use `saveAsDraft: true` while drafting; remove it or set it to `false` when the post is ready to publish.
+The goal is to share work as it actually happens: what I am learning, what is working, what still needs judgment, and how modern AI-assisted development can be useful without turning software delivery into guessing.
 
-## Hashnode Setup
+## Topics
 
-Install the Hashnode GitHub app on this repository and enable "Publish from GitHub" in the Hashnode dashboard.
+- Oracle APEX and #orclAPEX development in real projects
+- PL/SQL, SQLcl, exports, validation, and production-safe workflows
+- Oracle Cloud Infrastructure and Autonomous Database
+- Codex, AI agents, prompts, skills, and project-specific context
+- GitHub-backed engineering workflows and automation
+- Lessons from building and improving SaaS products as an entrepreneur
 
-Required frontmatter for each post:
+## Current Series
 
-```yaml
----
-title: "Post title"
-slug: "post-slug"
-tags: codex, oracle-apex, plsql
-domain: your-domain.hashnode.dev
-saveAsDraft: true
----
-```
+- `2026-04-26-building-oracle-apex-ai-skills.md`: why I built Oracle APEX AI Skills and what problem it tries to solve.
+- `2026-04-26-using-codex-with-apex-ai-skills.md`: practical examples of how I use Codex day to day with Oracle APEX AI Skills.
 
-Update `domain` after the Hashnode publication domain is confirmed.
+## Blog
 
-## Images
+Hashnode publication: [andre-souza.hashnode.dev](https://andre-souza.hashnode.dev/)
 
-Store screenshots and illustrations in `assets/`. For Hashnode covers, upload the image to Hashnode's CDN first and use the returned URL in `cover`.
+Featured open-source project: [oracle-apex-ai-skills](https://github.com/andre-simplifica/oracle-apex-ai-skills)
 
-For inline screenshots, prefer stable URLs after publication. During drafting, keep the source image in `assets/` and replace local placeholders with final URLs before publishing.
-
-## Initial Editorial Queue
-
-1. `2026-04-26-building-oracle-apex-ai-skills.md`
-2. `2026-04-26-using-codex-with-apex-ai-skills.md`
+Operational notes for drafting, images, and Hashnode publishing live in [`docs/publishing-workflow.md`](docs/publishing-workflow.md).
