@@ -14,7 +14,7 @@ saveAsDraft: false
 
 # Why I Built Oracle APEX AI Skills
 
-I just published a new open-source project for the Oracle APEX community:
+I just published a new open-source project for the Oracle APEX community and the #orclAPEX ecosystem:
 
 [Oracle APEX AI Skills](https://github.com/andre-simplifica/oracle-apex-ai-skills)
 
