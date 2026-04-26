@@ -8,6 +8,7 @@ seoTitle: "Why I Built Oracle APEX AI Skills"
 seoDescription: "Why I created Oracle APEX AI Skills to help AI agents work safely with APEX, PL/SQL, SQLcl, exports, and real project standards."
 enableToc: true
 hideFromHashnodeCommunity: true
+disableComments: false
 saveAsDraft: false
 ---
 
