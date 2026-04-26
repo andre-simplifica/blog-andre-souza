@@ -1,0 +1,35 @@
+name: Publish Hashnode
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "*.md"
+      - "scripts/publish-hashnode.mjs"
+      - ".github/workflows/publish-hashnode.yml"
+  workflow_dispatch:
+    inputs:
+      files:
+        description: "Optional comma-separated root Markdown files to publish"
+        required: false
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Publish changed posts to Hashnode
+        env:
+          HASHNODE_TOKEN: ${{ secrets.HASHNODE_TOKEN }}
+          HASHNODE_HOST: andre-souza.hashnode.dev
+          HASHNODE_FILES: ${{ github.event.inputs.files }}
+        run: node scripts/publish-hashnode.mjs

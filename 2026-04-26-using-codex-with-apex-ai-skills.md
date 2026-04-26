@@ -2,7 +2,7 @@
 title: "How I Use Codex with Oracle APEX AI Skills in Real Work"
 slug: "how-i-use-codex-with-oracle-apex-ai-skills"
 tags: codex, oracle-apex, plsql, ai, productivity
-domain: your-domain.hashnode.dev
+domain: andre-souza.hashnode.dev
 subtitle: "Practical examples from my day-to-day workflow using Codex and reusable Oracle APEX skills."
 seoTitle: "How I Use Codex with Oracle APEX AI Skills in Real Work"
 seoDescription: "Concrete examples of using Codex with Oracle APEX AI Skills for development, review, validation, and documentation workflows."

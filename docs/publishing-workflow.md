@@ -40,7 +40,22 @@ The desired flow is:
 
 Current Hashnode publication domain: `andre-souza.hashnode.dev`.
 
-If the Hashnode dashboard does not expose "Publish from GitHub" for this publication, do not publish through the visual editor as the default workflow. Keep GitHub as the source of truth and use either Hashnode's supported GitHub publishing flow or an API-based automation once configured.
+Hashnode's native GitHub-as-source flow is documented by Hashnode, but this publication dashboard currently exposes the connected repository under the backup flow only. Until the native GitHub source section is available for this publication, this repository publishes through `.github/workflows/publish-hashnode.yml` and Hashnode's GraphQL API.
+
+Required GitHub secret:
+
+```text
+HASHNODE_TOKEN
+```
+
+Create the token in Hashnode Developer Settings and store it as a repository secret in GitHub. Do not commit the token into this repository.
+
+Publishing behavior:
+
+- Root-level Markdown files with `saveAsDraft: false` are published or updated on Hashnode.
+- Root-level Markdown files with `saveAsDraft: true` are intentionally skipped.
+- `README.md` is ignored and remains only the public repository profile.
+- The workflow can be triggered manually with `workflow_dispatch` and an optional comma-separated `files` input.
 
 ## Images
 
