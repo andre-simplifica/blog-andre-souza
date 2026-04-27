@@ -14,13 +14,28 @@ saveAsDraft: false
 
 # Why I Built Oracle APEX AI Skills
 
+If you have ever copied an Oracle APEX page and then spent the next hour hunting for the missing Dynamic Action, process condition, item setting, authorization rule, or PL/SQL package convention, you know the real problem.
+
+The hard part is not only building the page. It is remembering everything the project already decided.
+
+That is exactly where AI-assisted development can help, but only if the agent has enough context to work safely.
+
 I just published a new open-source project for the Oracle APEX community and the #orclAPEX ecosystem:
 
 [Oracle APEX AI Skills](https://github.com/andre-simplifica/oracle-apex-ai-skills)
 
 ![Vibe Coding for Oracle APEX](https://raw.githubusercontent.com/andre-simplifica/oracle-apex-ai-skills/main/assets/vibe-coding-oracle-apex.png align="center")
 
+## TL;DR
+
+- Oracle APEX AI Skills is a reusable set of instructions and playbooks for AI agents working with Oracle APEX projects.
+- The goal is to make AI-assisted APEX development safer by making the agent inspect the existing app, respect project standards, and validate runtime behavior.
+- The reusable core stays generic, while each real project keeps its own rules in a local project profile.
+- If you build with Oracle APEX, now is the right time to start testing AI-assisted workflows carefully in your own projects.
+
 It is a reusable set of AI skills and development playbooks designed to help tools like Codex, Claude Code, and other AI agents work better with Oracle APEX projects.
+
+By "skill," I mean a reusable instruction set that tells an AI agent how to approach a specific kind of work: what to inspect first, which tools and files matter, which mistakes to avoid, and what must be validated before the work can be trusted.
 
 The main idea is simple: AI-assisted development should not mean guessing.
 
@@ -42,6 +57,14 @@ The project-specific part stays inside each application's own profile, usually i
 
 That separation is important. A shared APEX skill should not know private business rules from one application. At the same time, a real project needs more than generic Oracle APEX advice. It needs its own standards written down in a way an AI agent can actually use.
 
+## What it does not do
+
+This is not a replacement for an experienced Oracle APEX developer.
+
+It also does not remove the need for runtime validation, database review, security review, or engineering judgment. The point is to make the agent more useful during the work, not to let it make unsupported decisions.
+
+The reusable skill should not contain private application rules, customer data, credentials, production logs, internal URLs, or schema-specific assumptions. Those details belong in the consuming project's private context, and even there they should be handled carefully.
+
 ## Why I built it
 
 I created this because I kept seeing the same pattern in real work.
@@ -53,6 +76,23 @@ When the agent has clear instructions and a repeatable workflow, the quality cha
 That does not remove the need for an experienced APEX developer. It makes the collaboration more useful.
 
 For me, the value is not just speed. It is consistency. If the same validation checklist, export rule, PL/SQL guardrail, and project profile are reused every day, the agent gets less random and the team gets a clearer development process.
+
+## How to try it
+
+Start with one real but low-risk APEX workflow.
+
+Do not ask the AI agent to "build a page" from a vague prompt. Give it context, examples, constraints, and validation expectations:
+
+```text
+Use the Oracle APEX development skill to inspect the existing application before proposing changes.
+Compare the current pattern with pages 45 and 46.
+Identify the owning PL/SQL package, expected Page Designer changes, and runtime validations.
+Do not invent tables, columns, packages, APIs, or business rules.
+```
+
+That kind of prompt changes the collaboration. The agent is no longer just generating code. It is being asked to inspect, compare, reason, and explain what must be validated.
+
+From there, the next step is to adapt the project profile for your own application: which pages are good examples, which package owns each area, how help is displayed, how exports are handled, and what "done" means for your team.
 
 ## What I hope happens next
 
@@ -72,4 +112,4 @@ If you are experimenting with Codex, Claude Code, or any other AI coding agent i
 
 AI-assisted development with project-specific skills is not a temporary trend. It is quickly becoming part of how serious software teams will work. Every Oracle APEX developer should start experimenting with it in real projects as soon as possible, carefully, with validation, and with the same production mindset we already apply to database and application changes.
 
-At the moment, I am using Codex 5.5 for this workflow, and the best results have consistently come from running it with high or extra high reasoning. For Oracle APEX work, that extra reasoning time matters because the agent needs to inspect the existing application, respect the project context, and avoid jumping to conclusions too quickly.
+As of April 2026, I am using Codex 5.5 for this workflow, and the best results have consistently come from running it with high or extra high reasoning. The specific model will change over time, but the underlying point should remain true: for Oracle APEX work, reasoning time matters because the agent needs to inspect the existing application, respect the project context, and avoid jumping to conclusions too quickly.
