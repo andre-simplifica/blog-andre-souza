@@ -60,12 +60,16 @@ This is still early, and that is part of the reason I wanted to make it public.
 
 Oracle APEX teams have different conventions. Some rely heavily on Page Designer. Some keep most logic in packages. Some use SQLcl exports carefully. Some have mature project standards, while others keep too much knowledge in people's heads.
 
-The better these shared skills become, the faster and safer the workflow gets for everyone using AI with APEX.
+The better these shared skills become, the faster and safer the workflow gets for everyone using AI with APEX. That is why contributions matter so much. The project will only become solid if real APEX developers bring in their patterns, edge cases, validation flows, export habits, and hard-earned lessons from production work.
+
+I would especially love to see people from the Oracle APEX team look at it, challenge it, suggest improvements, and help make this kind of workflow more useful for the broader community.
 
 Suggestions, issues, pull requests, and contributions are very welcome:
 
 [https://github.com/andre-simplifica/oracle-apex-ai-skills](https://github.com/andre-simplifica/oracle-apex-ai-skills)
 
 If you are experimenting with Codex, Claude Code, or any other AI coding agent in an Oracle APEX project, I would love to hear what patterns are working for you and where the current tools still fall short.
+
+AI-assisted development with project-specific skills is not a temporary trend. It is quickly becoming part of how serious software teams will work. Every Oracle APEX developer should start experimenting with it in real projects as soon as possible, carefully, with validation, and with the same production mindset we already apply to database and application changes.
 
 At the moment, I am using Codex 5.5 for this workflow, and the best results have consistently come from running it with high or extra high reasoning. For Oracle APEX work, that extra reasoning time matters because the agent needs to inspect the existing application, respect the project context, and avoid jumping to conclusions too quickly.
