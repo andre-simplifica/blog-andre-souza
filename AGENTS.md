@@ -17,6 +17,7 @@ This repository is the source and backup for Andre Souza's Hashnode blog.
 - Prefer practical, real-world articles based on actual work with Oracle APEX, #orclAPEX, PL/SQL, OCI, Codex, AI, GitHub, and SaaS/product development.
 - Keep the writing specific enough to be useful to experienced developers.
 - When the user provides screenshots, place source files under `assets/` and reference them from the post.
+- For new articles and substantial rewrites, follow the local blog writing skill at `skills/andre-hashnode-blog-writing/SKILL.md`.
 
 ## Source Files
 
