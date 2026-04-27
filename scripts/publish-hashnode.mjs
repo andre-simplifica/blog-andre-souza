@@ -229,6 +229,10 @@ async function main() {
       console.log(`Skipping ${file}: draft or ignored.`);
       continue;
     }
+    if (parsed.data.cuid) {
+      console.log(`Skipping ${file}: Hashnode backup file.`);
+      continue;
+    }
     if (parsed.data.domain && parsed.data.domain !== host) {
       console.log(`Skipping ${file}: domain ${parsed.data.domain} does not match ${host}.`);
       continue;
