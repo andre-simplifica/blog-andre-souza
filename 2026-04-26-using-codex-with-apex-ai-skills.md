@@ -10,15 +10,6 @@ enableToc: true
 saveAsDraft: true
 ---
 
-<!--
-Draft notes for Codex:
-- Main goal: show practical examples of how Codex is used day to day with the Oracle APEX AI Skills.
-- Use concrete scenarios: page analysis, PL/SQL review, APEX export guidance, validation checklists, docs, and safer production-oriented workflows.
-- Include screenshots later when the user sends them here.
-- Keep the English natural and close to how an experienced US-based engineer would write.
-- Avoid exaggerated claims and generic productivity content.
--->
-
 # How I Use Codex with Oracle APEX AI Skills in Real Work
 
 Draft placeholder.

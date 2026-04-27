@@ -5,6 +5,12 @@ description: Write, revise, and polish Andre Souza's English Hashnode blog posts
 
 # Andre Hashnode Blog Writing
 
+## Purpose
+
+Use this skill to create public, useful, technically credible blog content from real work without exposing private project details.
+
+This blog should help experienced developers understand practical Oracle APEX, PL/SQL, OCI, Codex, GitHub, AI-assisted development, and SaaS/product engineering workflows. It is not a private work log, support notebook, or place to publish customer-specific implementation details.
+
 ## Use This Skill When
 
 - Creating a new canonical date-prefixed Markdown post in the blog repository.
@@ -27,6 +33,7 @@ Prefer:
 - Measured confidence over hype.
 - First-person experience when the source material supports it.
 - Short paragraphs and clear transitions.
+- Clear opinions grounded in evidence, not motivational language.
 
 Avoid:
 
@@ -36,11 +43,21 @@ Avoid:
 - Corporate jargon unless it is the actual term used in the domain.
 - Posts that only make sense to readers who already know the full background.
 
-## Source Discipline
+## Public Safety
 
 The user controls the ideas. Do not add claims that are not supported by the user's notes, repository evidence, runtime evidence, screenshots, or explicit direction.
 
 If a useful point is missing, either leave a placeholder in a draft note or ask for the missing fact. Do not fill gaps with "typical" Oracle/APEX behavior.
+
+Before publishing or committing public content, check for:
+
+- Secrets, tokens, credentials, cookies, authorization headers, wallets, connection strings, private keys, or API keys.
+- Private hostnames, internal URLs, local-only endpoints, database service names, workspace names, schema names, or customer identifiers.
+- Production payloads, logs, stack traces, screenshots, or error messages that expose private data.
+- Customer names, employee names, financial data, commercial data, support tickets, or operational incidents that were not explicitly intended for publication.
+- Business rules, implementation details, or examples copied from a private application when a generic version would be enough.
+
+If a concrete example is valuable but too specific, generalize it. Keep the technical lesson while removing private identifiers.
 
 For technical articles:
 
@@ -48,7 +65,7 @@ For technical articles:
 - Explain business or operational constraints only when they are present in the source context.
 - Treat production-safety claims carefully. Say what the workflow does, what it checks, and what still needs human review.
 
-## Recommended Shape
+## Article Structure
 
 Use this structure as a default, not as a rigid template:
 
@@ -69,7 +86,16 @@ Introduce terms before relying on them. For example, if a post uses "skills", "S
 
 For series posts, include one or two sentences of prior context. Do not assume the reader read the earlier article.
 
-## Hashnode Markdown Rules
+## Drafting Rules
+
+- Start from the canonical date-prefixed Markdown file when one already exists.
+- Treat Hashnode `cuid` files as backups, not the primary editing source.
+- Keep public posts in English, even when source notes are in Portuguese.
+- Keep draft notes inside HTML comments only when they are useful and safe to publish in the public repository.
+- Remove placeholders, private reminders, and unresolved internal notes before setting `saveAsDraft: false`.
+- Use screenshots only when the source image is safe for a public repository and public article.
+
+## Hashnode Markdown
 
 Keep Markdown simple and Hashnode-friendly:
 
@@ -100,7 +126,7 @@ Use `saveAsDraft: false` only when the user explicitly wants the post published 
 
 ## Quality Checklist
 
-Before considering a draft ready:
+Before considering a draft ready, verify:
 
 - The first 25% is understandable without external context.
 - The article states the practical problem or value early.
@@ -111,21 +137,5 @@ Before considering a draft ready:
 - Paragraphs and headings are easy to scan on mobile.
 - Frontmatter is valid and points to `andre-souza.hashnode.dev`.
 - Canonical edits are in a date-prefixed Markdown file, not a Hashnode `cuid` backup file.
-
-## What Was Adapted From The External Skill
-
-Keep these useful ideas:
-
-- Reader-centric writing.
-- Strong opening and short setup before the argument.
-- Progressive disclosure of technical terms.
-- Concrete examples before abstract lessons.
-- Short paragraphs and scannable headings.
-- Final quality checklist.
-
-Do not carry over these parts:
-
-- Substack-specific guidance.
-- Another author's personal voice, idioms, cultural references, or signature phrases.
-- The two-file `braindump.md` and `draft.md` workflow as a requirement.
-- Rules that require approval before every prose addition; here, use the user's notes and repo evidence directly, and ask only when a missing fact would be risky to invent.
+- Public-safety review found no secrets, private URLs, customer data, private logs, or internal-only implementation details.
+- If publishing, `saveAsDraft: false` is intentional and requested.
