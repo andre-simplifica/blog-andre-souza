@@ -67,3 +67,5 @@ Suggestions, issues, pull requests, and contributions are very welcome:
 [https://github.com/andre-simplifica/oracle-apex-ai-skills](https://github.com/andre-simplifica/oracle-apex-ai-skills)
 
 If you are experimenting with Codex, Claude Code, or any other AI coding agent in an Oracle APEX project, I would love to hear what patterns are working for you and where the current tools still fall short.
+
+At the moment, I am using Codex 5.5 for this workflow, and the best results have consistently come from running it with high or extra high reasoning. For Oracle APEX work, that extra reasoning time matters because the agent needs to inspect the existing application, respect the project context, and avoid jumping to conclusions too quickly.
